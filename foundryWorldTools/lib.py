@@ -1045,7 +1045,7 @@ class FWTNeDB(FWTDb):
         elif isinstance(lookup_obj, list):
             logging.debug("obj_lookup_generator: found list object")
             for item in lookup_obj:
-                yield from self.find_generator(item, lookup_val, lookup_key)
+                yield from self.find_generator(lookup_val, lookup_key, item)
         else:
             logging.debug("obj_lookup_generator: got unknown object")
 
